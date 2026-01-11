@@ -1,0 +1,300 @@
+{
+  "OverallCoordinator": [
+    {
+      "Name": "Chaman Patel",
+      "Branch": "",
+      "Photo": "./src/assets/TeamImagesHC/ChamanPatel.webp"
+    },
+    {
+      "Name": "Karan Singh Raghuvanshi",
+      "Branch": "Chemical",
+      "Photo": "./src/assets/TeamImagesHC/KaranSinghRaghuvanshi.webp"
+    },
+    {
+      "Name": "Arpit Singh Jakhar",
+      "Branch": "",
+      "Photo": "./src/assets/TeamImagesHC/Arpitsinghjakhar.webp"
+    },
+    {
+      "Name": "Shivanshu Singh",
+      "Branch": "Metallurgy",
+      "Photo": "./src/assets/TeamImagesHC/ShivanshuSingh.jpg"
+    },
+    {
+      "Name": "Ritik Roshan Padhi",
+      "Branch": "Information Technology",
+      "Photo": "./src/assets/TeamImagesHC/RitikPadhi.jpeg"
+    },
+    {
+      "Name": "Anagha Bodhke",
+      "Branch": "Biotechnology",
+      "Photo": "./src/assets/TeamImagesHC/AnaghaBodhke.jpg"
+    }
+  ],
+
+  "Sports Coordinator": [
+    {
+      "Name": "Ashish Sharma",
+      "Branch": "Metallurgy and Materials Engineering",
+      "Domain": "Sports coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AshishSharma.jpg"
+    },
+    {
+      "Name": "Abhilash kar",
+      "Branch": "Electrical",
+      "Domain": "Sports cordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/Abhilashkar.jpg"
+    },
+    {
+      "Name": "Ayush Verma",
+      "Branch": "Mechanical",
+      "Domain": "Sports Coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AyushVerma.jpg"
+    },
+    {
+      "Name": "Shubham Rana",
+      "Branch": "Mining Engineering",
+      "Domain": "Sports Coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/ShubhamRana.webp"
+    },
+    {
+      "Name": "Rhonit Biswal",
+      "Branch": "Mining Engineering",
+      "Domain": "Sports Coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/RhonitBiswal.jpg"
+    },
+    {
+      "Name": "Ashish",
+      "Branch": "Metallurgical and Materials",
+      "Domain": "Sports Coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/Ashish.jpg"
+    },
+    {
+      "Name": "Kilaparthi Priyanka",
+      "Branch": "Mining engineering",
+      "Domain": "Sports Coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/KilaparthiPriyanka.jpeg"
+    },
+    {
+      "Name": "Prakhar Borkar",
+      "Branch": "Mechanical Engineering",
+      "Domain": "Sports Coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/PrakharBorkar.jpg"
+    },
+    {
+      "Name": "K M SUMANTH",
+      "Branch": "CSE",
+      "Domain": "Sports coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/KMSUMANTH.jpg"
+    },
+    {
+      "Name": "Abhay Dubey",
+      "Branch": "Biotechnology",
+      "Domain": "Sports coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AbhayDubey.jpg"
+    },
+    {
+      "Name": "Sudhanshu patel",
+      "Branch": "Metallurgical and materials engineering",
+      "Domain": "Sports coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/Sudhanshupatel.webp"
+    },
+    {
+      "Name": "Ritik Sahu",
+      "Branch": "Civil",
+      "Domain": "Sports coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/RitikSahu.jpg"
+    },
+    {
+      "Name": "Aditya Soni",
+      "Branch": "Metallurgical and Materials Engineering",
+      "Domain": "Sports Coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AdityaSoni.jpeg"
+    },
+    {
+      "Name": "Amardeep Kumar",
+      "Branch": "Mining",
+      "Domain": "Sports coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AmardeepKumar.jpg"
+    },
+    {
+      "Name": "Abhay Dubey",
+      "Branch": "Biotechnology",
+      "Domain": "Sports Coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AbhayDubey.jpg"
+    },
+    {
+      "Name": "Som prakash rathore",
+      "Branch": "Mining",
+      "Domain": "Sports coordinator",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/SomprakashRathore.jpg"
+    }
+  ],
+
+  "Design Team": [
+    {
+      "Name": "Sriyanshu Jaiswal",
+      "Branch": "Mechanical",
+      "Domain": "Design",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/SriyanshuJaiswal.jpg"
+    },
+    {
+      "Name": "Shivanshu singh",
+      "Branch": "Metallurgical and materials Engineering",
+      "Domain": "Design",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/ShivanshuSingh.jpg"
+    }
+  ],
+
+  "Public Relation Team": [
+    {
+      "Name": "Akshat Gauraha",
+      "Branch": "Chemical Engineering",
+      "Domain": "Public Relations",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AkshatGauraha.jpg"
+    },
+    {
+      "Name": "Shahzad",
+      "Branch": "Mining",
+      "Domain": "PR",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/Shahzad.jpg"
+    },
+    {
+      "Name": "Anshuman Singh",
+      "Branch": "Electrical engineering",
+      "Domain": "PR",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AnshumanSingh.jpg"
+    }
+  ],
+
+  "Sponsorship Team": [
+    {
+      "Name": "Jatin Garhewal",
+      "Branch": "Electronics and Communication",
+      "Domain": "Spons",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/JatinGarhewal.jpeg"
+    },
+    {
+      "Name": "Aashutosh Sahu",
+      "Branch": "Civil engg.",
+      "Domain": "Spons",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AashutoshSahu.jpg"
+    },
+    {
+      "Name": "NAMIT CHAWDA",
+      "Branch": "Chemical Engineering",
+      "Domain": "Sponsorship",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/NAMITCHAWDA.jpg"
+    }
+  ],
+
+  "Tech Team": [
+    {
+      "Name": "Shankar Palagani",
+      "Branch": "ECE",
+      "Domain": "Web-dev",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/ShankarPalagani.jpg"
+    },
+    {
+      "Name": "Akshay Jain",
+      "Branch": "MME",
+      "Domain": "Web-dev",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/AkshayJain.jpg"
+    }
+  ],
+
+  "Event Management": [
+    {
+      "Name": "Vishal Kumar",
+      "Branch": "Mining",
+      "Domain": "EM",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/VishalKumar.jpg"
+    },
+    {
+      "Name": "Arpan Kumar Purkait",
+      "Branch": "Mechanical",
+      "Domain": "Event Management",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/ArpanKumarPurkait.jpg"
+    },
+    {
+      "Name": "Jay Yadav",
+      "Branch": "Mechanical",
+      "Domain": "Event Management",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/JayYadav.webp"
+    },
+    {
+      "Name": "Vikash Pandey",
+      "Branch": "Mining engineering",
+      "Domain": "EM",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/VikashPandey.jpg"
+    },
+    {
+      "Name": "Shashank Pillai",
+      "Branch": "MME",
+      "Domain": "EM",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/ShashankPillai.jpeg"
+    },
+    {
+      "Name": "Manali Lokhande",
+      "Branch": "Mechanical Engineering",
+      "Domain": "EM",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/ManaliLokhande.jpg"
+    },
+    {
+      "Name": "Sharvari Dambhe",
+      "Branch": "Biotechnology",
+      "Domain": "Event management",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/SharvariDambhe.jpg"
+    },
+    {
+      "Name": "Yash Kumar Gupta",
+      "Branch": "Metallurgical and materials",
+      "Domain": "EM",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/YashKumarGupta.jpg"
+    }
+  ],
+
+  "Documentation": [
+    {
+      "Name": "Priyanshu Mishra",
+      "Branch": "Metallurgical and Materials Engineering",
+      "Domain": "Documentation",
+      "designation": "HC",
+      "Photo": "./src/assets/TeamImagesHC/PriyanshuMishra.jpg"
+    }
+  ]
+}

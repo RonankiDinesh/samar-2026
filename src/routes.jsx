@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/navigation/header/header";
 import Home from "./pages/home/home";
+import Team from "./pages/team/team";
 // import About from "./pages/about/about";
 // import Merchandise from "./pages/merchandise/merchandise";
 // import Team from "./pages/team/team.jsx"
@@ -26,6 +27,7 @@ function RoutesConfig() {
           <Route path="/register" element={<Register />} />
           <Route path="/register/:sport" element={<Registration2 />} />
           <Route path="*" element={<SUC />} /> */}
+          <Route path="/team" element={<Team/>}/>
         </Routes>
         {/* <Footer /> */}
       </Router>
