@@ -5,7 +5,7 @@ import Header from "./components/navigation/header/header";
 import Home from "./pages/home/home";
 import Team from "./pages/team/team";
 // import About from "./pages/about/about";
-// import Merchandise from "./pages/merchandise/merchandise";
+import Merchandise from "./pages/merchandise/merchandise";
 // import Team from "./pages/team/team.jsx"
 // import Contact from "./pages/contact/contact";
 // import Register from "./pages/register/register";
@@ -21,7 +21,8 @@ function RoutesConfig() {
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/about" element={<About />} /> */}
-          {/* <Route path="/merchandise" element={<Merchandise />} />
+          {<Route path="/merchandise" element={<Merchandise />} />
+          /*
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Register />} />
