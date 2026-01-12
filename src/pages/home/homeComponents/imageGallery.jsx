@@ -54,9 +54,10 @@ function ImageSection() {
 
         {/* TITLE */}
         <div className="text-center mb-10">
-          <h2 className="font-crossFly uppercase text-3xl sm:text-4xl text-[#8CCCFF] drop-shadow-[3px_3px_0px_#000]">
-            Image Gallery
-          </h2>
+          <h1 className="font-crossFly text-3xl sm:text-4xl lg:text-5xl text-white">
+            Image{" "}
+            <span className="italic text-[#8CCCFF] glow-text">Gallery</span>
+          </h1>
           <div className="relative mt-3 flex justify-center">
             <span className="w-32 h-1 bg-gray-100 rounded-xl"></span>
             <span className="absolute w-8 h-1 bg-amber-500 rounded-xl"></span>
@@ -78,7 +79,7 @@ function ImageSection() {
               className={`
                 snap-center flex-shrink-0 cursor-pointer
                 relative rounded-xl overflow-hidden
-                border-2 border-rose-500
+                border-2 border-[#8CCCFF]
                 transition-all duration-500
                 h-[260px] sm:h-[320px] lg:h-[400px]
                 ${
