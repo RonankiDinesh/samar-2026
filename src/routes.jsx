@@ -11,7 +11,7 @@ import Intro from "./pages/home/intro.jsx";
 // import About from "./pages/about/about";
 import Merchandise from "./pages/merchandise/merchandise";
 // import Team from "./pages/team/team.jsx"
-// import Contact from "./pages/contact/contact";
+import Contact from "./pages/contact/contact";
 // import Register from "./pages/register/register";
 // import Registration2 from "./pages/register/Registration2.jsx"
 // import SUC from "./pages/underConstruction.jsx";
