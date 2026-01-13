@@ -100,7 +100,7 @@ function ImageSection() {
               {/* CONTENT */}
               <div
                 className={`
-                  absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white
+                                    relative top-[190px] max-lg:top-[160px] max-md:top-[15vh] left-0 right-0 p-4 sm:p-6 text-white
                   transition-all duration-500
                   ${
                     index === activeIndex
