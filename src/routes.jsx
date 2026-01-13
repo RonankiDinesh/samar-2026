@@ -10,6 +10,7 @@ import Team from "./pages/team/team";
 import Intro from "./pages/home/intro.jsx";
 // import About from "./pages/about/about";
 import Merchandise from "./pages/merchandise/merchandise";
+import Spaceship from "./components/spaceship.jsx"; 
 // import Team from "./pages/team/team.jsx"
 // import Contact from "./pages/contact/contact";
 // import Register from "./pages/register/register";
@@ -23,9 +24,20 @@ function AppContent() {
   const [showHomepage, setShowHomepage] = useState(1);
   const [loading, setLoading] = useState(false);
   const videoRef = useRef(null);
-
+const isCursorEnabled = showHomepage === 3;
   const hideHeaderFooterPaths = ['/merchandise', '/register', '/register/cricket', '/register/badminton_(singles)', '/register/badminton_(doubles)', '/register/basketball', '/register/vollyball', '/register/football', '/register/chess', '/register/athletics', '/register/hockey', '/register/handball', '/register/kabaddi', '/register/khokho', '/register/tt_singles', '/register/tt_doubles'];
   const shouldShowHeaderFooter = !hideHeaderFooterPaths.includes(location.pathname);
+  useEffect(() => {
+    if (isCursorEnabled) {
+      document.body.classList.add("cursor-hidden");
+    } else {
+      document.body.classList.remove("cursor-hidden");
+    }
+
+    return () => {
+      document.body.classList.remove("cursor-hidden");
+    };
+  }, [isCursorEnabled]);
 
   useEffect(() => {
     const sessionStarted = sessionStorage.getItem('sessionStarted');
@@ -102,6 +114,7 @@ function AppContent() {
 
   return (
     <div>
+      {isCursorEnabled&& <Spaceship />}
         <>
           {showHomepage === 1 ? (
             <Intro handleClick={handleDivClick} />
