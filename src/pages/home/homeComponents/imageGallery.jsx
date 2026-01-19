@@ -17,37 +17,49 @@ const games = [
 
 function ImageSection() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const totalItems = games.length;
+  const isClicked = useRef(false);
+  const timeoutRef = useRef(null);
   const intervalRef = useRef(null);
 
-  /* ---------------- AUTO SLIDE (DESKTOP ONLY) ---------------- */
   useEffect(() => {
-    if (window.innerWidth < 1024) return;
-
-    intervalRef.current = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % games.length);
-    }, 3500);
-
-    return () => clearInterval(intervalRef.current);
-  }, []);
-
-  /* ---------------- STOP AUTO SLIDE ON USER SCROLL ---------------- */
-  useEffect(() => {
-    const stopAuto = () => clearInterval(intervalRef.current);
-
-    window.addEventListener("wheel", stopAuto, { passive: true });
-    window.addEventListener("touchstart", stopAuto, { passive: true });
+    if (!isClicked.current) {
+      intervalRef.current = setInterval(() => {
+        handleNext();
+      }, 3000);
+    }
 
     return () => {
-      window.removeEventListener("wheel", stopAuto);
-      window.removeEventListener("touchstart", stopAuto);
+      clearInterval(intervalRef.current);
     };
   }, []);
 
-  const handleCardClick = (index) => {
-    clearInterval(intervalRef.current);
-    setActiveIndex(index);
+  const handleNext = () => {
+    setActiveIndex((prevIndex) => (prevIndex + 1) % totalItems);
   };
 
+  const handlePrev = () => {
+    setActiveIndex((prevIndex) =>
+      (prevIndex - 1 + totalItems) % totalItems
+    );
+  };
+
+  const handleCardClick = (index) => {
+    if (index !== activeIndex) {
+      clearInterval(intervalRef.current);
+      isClicked.current = true;
+
+      setActiveIndex(index);
+
+      timeoutRef.current = setTimeout(() => {
+        handleNext();
+        isClicked.current = false;
+        intervalRef.current = setInterval(() => {
+          handleNext();
+        }, 3000);
+      }, 10000);
+    }
+  };
   return (
     <section className="py-14 sm:py-20 flex justify-center">
       <main className="w-full max-w-[1600px] px-4 sm:px-10">
@@ -64,70 +76,46 @@ function ImageSection() {
           </div>
         </div>
 
-        {/* SLIDER */}
-        <div
-          className="
-            flex gap-5 overflow-x-auto scrollbar-hide
-            snap-x snap-proximity
-            pb-4
-          "
-        >
-          {games.map((game, index) => (
-            <div
-              key={game.id}
-              onClick={() => handleCardClick(index)}
-              className={`
-                snap-center flex-shrink-0 cursor-pointer
-                relative rounded-xl overflow-hidden
-                border-2 border-[#8CCCFF]
-                transition-all duration-500
-                h-[260px] sm:h-[320px] lg:h-[400px]
-                ${
-                  index === activeIndex
-                    ? "w-[280px] sm:w-[360px] lg:w-[520px]"
-                    : "w-[220px] sm:w-[300px] lg:w-[320px]"
-                }
-              `}
-              style={{
-                backgroundImage: `url(${game.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              {/* OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/90" />
+        <div className="p-5">
+          <div className="hidden md:flex transition-transform duration-1000 ease-in-out" style={{ transform: `translateX(-${activeIndex * 340}px)` }} >
+            {games.map((game, index) => (
+              <div key={game.id} onClick={() => handleCardClick(index)} className={`relative flex-shrink-0 ml-5 cursor-pointer border-2 border-[#8CCCFF] rounded-xl overflow-hidden transition-all duration-500 ease-in-out group ${index === activeIndex ? "w-[550px]" : "w-[320px]"} h-[400px]`} style={{ backgroundImage: `url(${game.image})`, backgroundSize: "cover", backgroundPosition: "center", }} >
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
 
-              {/* CONTENT */}
-              <div
-                className={`
-                                    relative top-[190px] max-lg:top-[160px] max-md:top-[15vh] left-0 right-0 p-4 sm:p-6 text-white
-                  transition-all duration-500
-                  ${
-                    index === activeIndex
-                      ? "translate-y-0"
-                      : "translate-y-[65%]"
-                  }
-                `}
-              >
-                <h3 className="font-crossFly italic uppercase text-lg sm:text-xl">
-                  {game.title}
-                </h3>
+                <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all ease-in-out"></div>
+                <div className={`absolute bottom-0 left-0 right-0 p-6 text-white transition-transform duration-500 ease-in-out ${index === activeIndex ? "translate-y-0" : "translate-y-[calc(100%-80px)]"}`} >
+                  <h3 className="text-xl font-bold mb-2 uppercase font-crossFly italic">
+                    {game.title}
+                  </h3>
 
-                <p
-                  className={`
-                    mt-2 text-sm sm:text-base text-gray-300 tracking-wide
-                    transition-opacity duration-500
-                    ${index === activeIndex ? "opacity-100" : "opacity-0"}
-                  `}
-                >
-                  {game.description}
-                </p>
+                  <p className={`text-gray-300 transition-opacity duration-500 font-brave81 lowercase tracking-wider ${index === activeIndex ? "opacity-100" : "opacity-0"}`} >
+                    {game.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="flex md:hidden transition-transform duration-1000 ease-in-out" style={{ transform: `translateX(-${activeIndex * 120}px)` }} >
+            {games.map((game, index) => (
+              <div key={game.id} onClick={() => handleCardClick(index)} className={`relative flex-shrink-0 ml-5 cursor-pointer border-2 border-[#8CCCFF] rounded-xl overflow-hidden transition-all duration-500 ease-in-out group ${index === activeIndex ? "w-[200px]" : "w-[100px]"} h-[200px]`} style={{ backgroundImage: `url(${game.image})`, backgroundSize: "cover", backgroundPosition: "center", }} >
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-90"></div>
+
+                <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all ease-in-out"></div>
+                <div className={`absolute bottom-0 left-0 right-0 p-6 text-white transition-transform duration-500 ease-in-out ${index === activeIndex ? "translate-y-0" : "translate-y-[calc(100%-80px)]"}`} >
+                  <h3 className="text-l font-bold mb-2 uppercase font-crossFly italic">
+                    {game.title}
+                  </h3>
+
+                  <p className={`text-gray-300 text-sm transition-opacity duration-500 font-brave81 lowercase tracking-wider ${index === activeIndex ? "opacity-100" : "opacity-0"}`} >
+                    {game.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-    </section>
+    </main>
+    </section >
   );
 }
 
