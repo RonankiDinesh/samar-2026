@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import "../homeStyles.css";
 
 import SamarLogo from "../../../assets/logo/samarLogoWhite.png";
-import SamarText from "../../../assets/customIllustration/samartext3.png";
+import SamarText from "../../../assets/customIllustration/samarText3.png";
 import Astronaut from "../../../assets/illustration/astronaut.png";
 
 function LandingSection() {
