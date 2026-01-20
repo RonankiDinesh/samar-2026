@@ -64,15 +64,7 @@ function AppContent() {
     };
   }, []);
 
-  useEffect(() => {
-    const videoPlayed = sessionStorage.getItem('videoPlayed');
-    const sessionStarted = sessionStorage.getItem('sessionStarted');
-
-    if (showHomepage === 2 && sessionStarted && !videoPlayed && videoRef.current) {
-      videoRef.current.play();
-      sessionStorage.setItem('videoPlayed', 'true');
-    }
-  }, [showHomepage]);
+  
 
   useEffect(() => {
     if (showHomepage === 2) {
@@ -85,10 +77,14 @@ function AppContent() {
     setShowHomepage(3);
   };
 
-  const videoSource = "https://res.cloudinary.com/dytabx6xe/video/upload/v1767624747/final_spaceship_2_vxo8hl.mp4";
+  const videoSource =
+    "https://res.cloudinary.com/dytabx6xe/video/upload/" +
+    "q_auto,f_auto,vc_auto,w_1280/" +
+    "final_spaceship_2_vxo8hl.mp4";
+
   useEffect(() => {
     const handleLocationChange = () => {
-      if (location.pathname === "/team" || location.pathname === "/merchandise" || location.pathname === "/contact") {
+      if (showHomepage===3 && (location.pathname === "/team" || location.pathname === "/merchandise" || location.pathname === "/contact")) {
         setLoading(true);
         setTimeout(() => {
           setLoading(false);
@@ -118,6 +114,7 @@ function AppContent() {
                   src={videoSource}
                   crossOrigin="anonymous"
                   playsInline
+                  preload="metadeta"
                   autoPlay
                   onError={(e) => console.error("Video Error:", e)}
                   onLoadedData={() => console.log("Video loaded successfully")}
