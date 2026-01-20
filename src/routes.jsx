@@ -68,7 +68,7 @@ function AppContent() {
 
   useEffect(() => {
     if (showHomepage === 2) {
-      const timer = setTimeout(() => setShowHomepage(3), 15200);
+      const timer = setTimeout(() => setShowHomepage(3), 15400);
       return () => clearTimeout(timer);
     }
   }, [showHomepage]);

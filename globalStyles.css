@@ -75,6 +75,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    
 }
 .cursor-hidden * {
     cursor: none !important;
