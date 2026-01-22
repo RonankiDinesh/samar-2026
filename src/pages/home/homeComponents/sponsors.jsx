@@ -38,7 +38,7 @@ function Sponsors() {
         <div
           className="
             backdrop-blur-lg
-            bg-white/5
+           bg-[#8CCCFF]/45
             border-y border-white/10
             py-6 sm:py-8
             rounded-xl

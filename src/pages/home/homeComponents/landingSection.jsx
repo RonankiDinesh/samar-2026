@@ -4,7 +4,7 @@ import "../homeStyles.css";
 
 import SamarLogo from "../../../assets/logo/samarLogoWhite.png";
 import SamarText from "../../../assets/customIllustration/samarText3.png";
-import Astronaut from "../../../assets/illustration/astronaut.png";
+import Spaceship from "../../../assets/illustration/spaceship.png";
 
 function LandingSection() {
   return (
@@ -17,8 +17,8 @@ function LandingSection() {
         {/* ASTRONAUT – LEFT */}
         <div className="hidden sm:flex absolute left-0 bottom-0 w-[80%] sm:w-[65%] lg:w-[55%] items-end justify-start pl-4 sm:pl-8 lg:pl-12">
           <img
-            src={Astronaut}
-            alt="Astronaut"
+            src={Spaceship}
+            alt="Spaceship"
             loading="lazy"
             decoding="async"
             className="
